@@ -1,0 +1,5 @@
+{
+  "fzf-lua": { "branch": "main", "commit": "dad2ca35141d9039bb881c3dafbc85a97803e3a9" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "nvim-web-devicons": { "branch": "master", "commit": "d3cf19ef81d364af2af527d6a23ad201330ccfad" }
+}
