@@ -96,9 +96,12 @@ local plugins = {
 },
 
 }
+<<<<<<< HEAD
 
 require("lazy").setup(plugins)
 
 -- note to future me:
 -- add files in configs/*.lua in order to do more than default
 
+=======
+>>>>>>> parent of ece42e0 (added fuzzy finder and set options)
