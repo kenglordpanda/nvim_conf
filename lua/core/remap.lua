@@ -1,4 +1,4 @@
--- leader remap
+-- leader remap 
 vim.g.mapleader = " "
 
 -- remap basic shit
