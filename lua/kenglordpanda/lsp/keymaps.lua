@@ -2,7 +2,7 @@
   -- Mappings.
   local opts = { buffer = bufnr, noremap = true, silent = true }
   
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts, "Go to Definition")
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
@@ -20,3 +20,7 @@
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
   vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, opts)
 
+
+  -- formatter
+  
+  vim.keymap.set('n', '<Leader>fm', ':Format<CR>')

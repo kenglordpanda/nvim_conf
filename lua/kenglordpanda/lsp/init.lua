@@ -14,4 +14,5 @@ for _ , lsp in ipairs(lsps) do
     }
 end
 
+require("kenglordpanda.lsp.formatter")
 require("kenglordpanda.lsp.keymaps")
