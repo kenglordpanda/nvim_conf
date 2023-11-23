@@ -12,11 +12,13 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require('lazy').setup({
    spec = {
       {import = "kenglordpanda.plugins"},
    },
 }
 )
+require("kenglordpanda.lsp")
+require("kenglordpanda.keymaps")
 vim.cmd("colorscheme melange")
+vim.cmd("COQnow -s")
