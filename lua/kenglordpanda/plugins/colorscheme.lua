@@ -1,7 +1,7 @@
 return {
 
     {
-        "savq/melange-nvim"
+        "savq/melange-nvim",
     },
 
 }

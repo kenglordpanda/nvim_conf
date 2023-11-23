@@ -1,4 +1,4 @@
-require("kenglordpanda.core.remap")
+require("kenglordpanda.core.keymaps")
 require("kenglordpanda.core.opts")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -19,3 +19,4 @@ require('lazy').setup({
    },
 }
 )
+vim.cmd("colorscheme melange")

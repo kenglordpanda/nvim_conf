@@ -1,23 +1,40 @@
 return {
-
 {
   "ibhagwan/fzf-lua",
-  -- optional for icon support
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    -- calling `setup` is optional for customization
     require("fzf-lua").setup({})
   end
 },
 {
   'stevearc/oil.nvim',
-  opts = {},
-  -- Optional dependencies
+  use_defaults_keymaps = false,
+    opts = {
+
+    vim.keymap.set('n','<Leader>o', ':Oil<cr>'),
+      keymaps = {
+    ["g?"] = "actions.show_help",
+    ["<CR>"] = "actions.select",
+    ["ov"] = "actions.select_vsplit",
+    ["<C-h>"] = "actions.select_split",
+    ["<C-t>"] = "actions.select_tab",
+    ["pv"] = "actions.preview",
+    ["ff"] = "actions.close",
+    ["<C-l>"] = "actions.refresh",
+    [".."] = "actions.parent",
+    ["cw"] = "actions.open_cwd",
+    ["`"] = "actions.cd",
+    ["~"] = "actions.tcd",
+    ["gs"] = "actions.change_sort",
+    ["gx"] = "actions.open_external",
+    ["g."] = "actions.toggle_hidden",
+    ["g\\"] = "actions.toggle_trash",
+        },
+    },
   dependencies = { "nvim-tree/nvim-web-devicons" },
 },
-
 {
-    "j-morano/buffer_manager.nvim",
+    'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'
 },
 
 }
