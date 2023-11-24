@@ -11,4 +11,5 @@ vim.keymap.set('i', '<C-v>', 'P')
 vim.keymap.set('v', '<C-v>', 'P')
 vim.keymap.set('c', '<C-v>', 'P')
 
-
+vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', {desc = 'Prev Buffer' })
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', {desc = 'Next Buffer' })

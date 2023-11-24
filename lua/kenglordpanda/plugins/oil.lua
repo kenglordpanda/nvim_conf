@@ -1,12 +1,5 @@
 return {
 	{
-		{
-			"nvim-telescope/telescope.nvim",
-			tag = "0.1.4",
-			dependencies = { "nvim-lua/plenary.nvim" },
-		},
-	},
-	{
 		"stevearc/oil.nvim",
 		use_defaults_keymaps = false,
 		opts = {

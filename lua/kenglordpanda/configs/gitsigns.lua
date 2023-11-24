@@ -69,7 +69,7 @@ require('gitsigns').setup {
     map('n', '<leader>hS', gs.stage_buffer, {desc = 'Git add buffer'})
     map('n', '<leader>hu', gs.undo_stage_hunk, {desc = 'Git reset hunk'})
     map('n', '<leader>hR', gs.reset_buffer, {desc = 'Reset buffer'})
-    map('n', '<leader>hp', gs.preview_hunk, {desc = 'Preview hunk'})
+    map('n', '<leader>hP', gs.preview_hunk, {desc = 'Preview hunk'})
     map('n', '<leader>hb', function() gs.blame_line{full=true} end, {desc = 'Floating git blame'})
     map('n', '<leader>tb', gs.toggle_current_line_blame, {desc = 'Toggle git blame line'})
     map('n', '<leader>hd', gs.diffthis, {desc = 'Git diff local'})
