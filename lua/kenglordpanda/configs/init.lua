@@ -1,3 +1,3 @@
 require("kenglordpanda.configs.lsp")
-require("telescope")
 require("kenglordpanda.configs.bufferline")
+require("kenglordpanda.configs.telescope")
