@@ -1,5 +1,4 @@
-require("kenglordpanda.core.keymaps")
-require("kenglordpanda.core.opts")
+require("kenglordpanda.core")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -18,7 +17,7 @@ require('lazy').setup({
    },
 }
 )
-require("kenglordpanda.lsp")
-require("kenglordpanda.keymaps")
+vim.keymap.set('n', '<Leader>la', ':Lazy<CR>', {desc = 'Open Lazy Manager'})
+require("kenglordpanda.configs")
 vim.cmd("colorscheme melange")
 vim.cmd("COQnow -s")
