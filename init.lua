@@ -19,5 +19,6 @@ require('lazy').setup({
 )
 vim.keymap.set('n', '<Leader>la', ':Lazy<CR>', {desc = 'Open Lazy Manager'})
 require("kenglordpanda.configs")
-vim.cmd("colorscheme melange")
+-- vim.cmd("colorscheme melange")
+vim.cmd("colorscheme bamboo")
 vim.cmd("COQnow -s")
