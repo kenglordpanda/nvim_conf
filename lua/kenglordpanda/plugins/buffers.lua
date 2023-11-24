@@ -11,7 +11,7 @@ return {
 		use_defaults_keymaps = false,
 		opts = {
 
-			vim.keymap.set("n", "<Leader>o", ":Oil<cr>"),
+			vim.keymap.set("n", "<Leader>o", ":Oil<cr>", {desc = "Open Oil File Explorer"}),
 			keymaps = {
 				["g?"] = "actions.show_help",
 				["<CR>"] = "actions.select",
@@ -32,10 +32,5 @@ return {
 			},
 		},
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 }
