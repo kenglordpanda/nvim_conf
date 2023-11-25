@@ -10,7 +10,8 @@ return {
                 height = 0.65,
                 width = 0.65,
             }
-        }
+        },
+        lazy = true,
     },
 
 }

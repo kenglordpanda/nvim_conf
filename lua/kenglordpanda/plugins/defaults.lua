@@ -4,6 +4,7 @@ return {
 
 	{
 		"ribru17/bamboo.nvim",
+        lazy = false,
 	},
 
 	{
@@ -25,9 +26,11 @@ return {
 	},
 	{
 		"ThePrimeagen/harpoon",
+        lazy = true,
 	},
     {
         "desdic/telescope-rooter.nvim",
+        lazy = true,
     },
 	{
 		"numToStr/Comment.nvim",
@@ -37,6 +40,7 @@ return {
 	},
 	{
 		"rafamadriz/friendly-snippets",
+        lazy = true,
 	},
 
 	{
@@ -44,13 +48,15 @@ return {
 		dependencies = { "rafamadriz/friendly-snippets" },
 		version = "v2.*",
 		build = "make install_jsregexp",
-	},
-	{
-		"RRethy/vim-illuminate",
-		event = "VeryLazy",
+        lazy = true,
 	},
 	{
 		"ggandor/leap.nvim",
 		dependencies = { "tpope/vim-repeat" },
+        lazy = true,
 	},
+    {
+        "moll/vim-bbye",
+        lazy = true,
+    },
 }
