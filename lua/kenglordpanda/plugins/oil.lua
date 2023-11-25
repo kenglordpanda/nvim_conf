@@ -3,8 +3,12 @@ return {
 		"stevearc/oil.nvim",
 		use_defaults_keymaps = false,
 		opts = {
-
-			vim.keymap.set("n", "<Leader>o", ":Oil<cr>", {desc = "Open Oil File Explorer"}),
+            default_file_explorer = true,
+            buf_options = {
+                buflisted = false,
+                bufhidden = "hide",
+            },
+			vim.keymap.set("n", "<Leader>o", ":Oil<cr>", { desc = "Open Oil File Explorer", noremap = true }),
 			keymaps = {
 				["g?"] = "actions.show_help",
 				["<CR>"] = "actions.select",

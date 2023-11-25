@@ -3,18 +3,15 @@
 return {
 
 	{
+		"ribru17/bamboo.nvim",
+	},
+
+	{
 		"nvim-lua/plenary.nvim",
 	},
 
 	{
 		"lewis6991/gitsigns.nvim",
-	},
-	{
-		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
-		lazy = false,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -28,22 +25,30 @@ return {
 	},
 	{
 		"ThePrimeagen/harpoon",
+		event = "VeryLazy",
 	},
 	{
 		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
+		opts = {},
 		lazy = false,
+		event = "VeryLazy",
 	},
-		{ "rafamadriz/friendly-snippets" },
+	{
+		"rafamadriz/friendly-snippets",
+	},
 
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
-		-- follow latest release.
-		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- install jsregexp (optional!).
+		version = "v2.*",
 		build = "make install_jsregexp",
+	},
+	{
+		"RRethy/vim-illuminate",
+		event = "VeryLazy",
+	},
+	{
+		"ggandor/leap.nvim",
+		dependencies = { "tpope/vim-repeat" },
 	},
 }
