@@ -55,8 +55,4 @@ return {
 		dependencies = { "tpope/vim-repeat" },
         lazy = true,
 	},
-    {
-        "moll/vim-bbye",
-        lazy = true,
-    },
 }
