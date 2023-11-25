@@ -25,8 +25,10 @@ return {
 	},
 	{
 		"ThePrimeagen/harpoon",
-		event = "VeryLazy",
 	},
+    {
+        "desdic/telescope-rooter.nvim",
+    },
 	{
 		"numToStr/Comment.nvim",
 		opts = {},
