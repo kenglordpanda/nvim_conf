@@ -8,7 +8,7 @@ return {
                 buflisted = false,
                 bufhidden = "hide",
             },
-			vim.keymap.set("n", "<Leader>o", ":Oil<cr>", { desc = "Open Oil File Explorer", noremap = true }),
+			vim.keymap.set("n", "<Leader>o", ":Oil<cr>", { desc = "Open Oil File Explorer", noremap = true, silent = true }),
 			keymaps = {
 				["g?"] = "actions.show_help",
 				["<CR>"] = "actions.select",
@@ -29,6 +29,5 @@ return {
 			},
 		},
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-        lazy = true,
 	},
 }

@@ -24,4 +24,4 @@ nmap("<Leader>q", vim.diagnostic.setloclist, "Open diagnostic list")
 
 -- formatter
 
-vim.keymap.set("n", "<Leader>fo", ":Format<CR>", { desc = "LSP Format" })
+vim.keymap.set("n", "<Leader>fm", ":Format<CR>", { desc = "LSP Format" })
