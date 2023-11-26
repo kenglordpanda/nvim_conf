@@ -39,7 +39,7 @@ return {
     },
     {
         "rafamadriz/friendly-snippets",
-        lazy = true,
+        lazy = false,
     },
 
     {
@@ -47,11 +47,11 @@ return {
         dependencies = { "rafamadriz/friendly-snippets" },
         version = "v2.*",
         build = "make install_jsregexp",
-        lazy = true,
+        lazy = false,
     },
     {
         "ggandor/leap.nvim",
         dependencies = { "tpope/vim-repeat" },
-        lazy = true,
+        lazy = false,
     },
 }

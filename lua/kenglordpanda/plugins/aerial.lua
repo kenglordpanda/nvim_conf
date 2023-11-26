@@ -19,6 +19,7 @@ return {
 				buftypes = "special",
 				wintypes = "special",
 			},
+            autojump = true,
 			manage_folds = true,
 			link_folds_to_tree = true,
 			link_tree_to_folds = true,
@@ -55,7 +56,7 @@ return {
 			on_first_symbols = function(bufnr) end,
 			close_on_select = false,
 			show_guides = true,
-
+            open_automatic = false,
 			guides = {
 				mid_item = "├─",
 				last_item = "└─",
