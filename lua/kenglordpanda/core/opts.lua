@@ -8,7 +8,9 @@ vim.opt.expandtab = true
 vim.opt.colorcolumn="80"
 vim.opt.swapfile=false
 vim.opt.backup=false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+
+-- modify undodir for windows
+vim.opt.undodir = "/Users/ktran/nvim/undodir"
 vim.opt.undofile = true
 vim.opt.hlsearch=false
 vim.opt.incsearch=true

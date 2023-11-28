@@ -11,15 +11,23 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require('lazy').setup({
-   spec = {
-      {import = "kenglordpanda.plugins"},
-   },
-}
-)
-vim.keymap.set('n', '<Leader>la', ':Lazy<CR>', {desc = 'Open Lazy Manager'})
-require("kenglordpanda.configs")
--- vim.cmd("colorscheme melange")
-vim.cmd("set hidden")
-vim.cmd("colorscheme bamboo")
-vim.cmd("COQnow -s")
+  require('lazy').setup({
+    spec = {
+        {import = "kenglordpanda.vscode-plugins"}
+    },
+  })
+if vim.fn.exists("g:vscode") ~= 0 then
+else
+  require('lazy').setup({
+    spec = {
+        {import = "kenglordpanda.plugins"},
+    },
+  }
+  )
+  vim.keymap.set('n', '<Leader>la', ':Lazy<CR>', {desc = 'Open Lazy Manager'})
+  require("kenglordpanda.configs")
+  -- vim.cmd("colorscheme melange")
+  vim.cmd("set hidden")
+  vim.cmd("colorscheme bamboo")
+  vim.cmd("COQnow -s")
+end
