@@ -3,7 +3,7 @@ local nmap = function(lhs, rhs, desc)
 	local opts = { buffer = bufnr, noremap = true, silent = true, desc = desc }
 	vim.keymap.set("n", lhs, rhs, opts)
 end
-
+nmap("<Leader>fm", vim.lsp.buf.format, "LSP Format")
 nmap("gD", vim.lsp.buf.declaration, "Go to declaration")
 nmap("gd", vim.lsp.buf.definition, "Go to definition")
 nmap("K", vim.lsp.buf.hover, "LSP Hover")
@@ -21,7 +21,3 @@ nmap("<Leader>e", vim.diagnostic.open_float, "Open floating diagnostic")
 nmap("[d", vim.diagnostic.goto_prev, "Go to previous diagnostic")
 nmap("]d", vim.diagnostic.goto_next, "Go to new diagnostic")
 nmap("<Leader>q", vim.diagnostic.setloclist, "Open diagnostic list")
-
--- formatter
-
-vim.keymap.set("n", "<Leader>fm", ":Format<CR>", { desc = "LSP Format", noremap = true, silent = true })
