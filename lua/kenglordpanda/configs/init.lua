@@ -1,8 +1,0 @@
-require("kenglordpanda.configs.lsp")
-require("kenglordpanda.configs.telescope")
-require("kenglordpanda.configs.autopairs")
-require("kenglordpanda.configs.gitsigns")
-require("kenglordpanda.configs.blankline")
-require("kenglordpanda.configs.harpoon")
-require("kenglordpanda.configs.leap")
-require("kenglordpanda.configs.rooter")

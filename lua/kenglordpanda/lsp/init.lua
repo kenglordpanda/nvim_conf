@@ -51,5 +51,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
-require("kenglordpanda.configs.lsp.formatter")
-require("kenglordpanda.configs.lsp.keymaps")
+require("kenglordpanda.lsp.formatter")
+require("kenglordpanda.lsp.keymaps")

@@ -1,57 +1,55 @@
--- this file is for any plugin that will get configred in configs/
--- also can be used just for default settings
 return {
 
-    {
-        "ribru17/bamboo.nvim",
-        lazy = false,
-    },
+	{
+		"ribru17/bamboo.nvim", lazy = false, },
 
-    {
-        "nvim-lua/plenary.nvim",
-    },
+	{
+		"nvim-lua/plenary.nvim",
+	},
 
-    {
-        "lewis6991/gitsigns.nvim",
-    },
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        opts = {},
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.4",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
-    {
-        "ThePrimeagen/harpoon",
-        lazy = true,
-    },
-    {
-        "desdic/telescope-rooter.nvim",
-    },
-    {
-        "numToStr/Comment.nvim",
-        opts = {},
-        lazy = false,
-        event = "VeryLazy",
-    },
-    {
-        "rafamadriz/friendly-snippets",
-        lazy = false,
-    },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		config = function()
+			local highlight = {
+				"CursorColumn",
+				"Whitespace",
+			}
+			require("ibl").setup({
+				indent = { highlight = highlight, char = "" },
+				whitespace = {
+					highlight = highlight,
+					remove_blankline_trail = false,
+				},
+				scope = { enabled = false },
+			})
+		end,
+	},
+	{
+		"numToStr/Comment.nvim",
+		opts = {},
+		lazy = false,
+		event = "VeryLazy",
+	},
+	{
+		"rafamadriz/friendly-snippets",
+		lazy = false,
+	},
 
-    {
-        "L3MON4D3/LuaSnip",
-        dependencies = { "rafamadriz/friendly-snippets" },
-        version = "v2.*",
-        build = "make install_jsregexp",
-        lazy = false,
-    },
-    {
-        "ggandor/leap.nvim",
-        dependencies = { "tpope/vim-repeat" },
-        lazy = false,
-    },
+	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+		version = "v2.*",
+		build = "make install_jsregexp",
+		lazy = false,
+	},
+	{
+		"ggandor/leap.nvim",
+		dependencies = { "tpope/vim-repeat" },
+		lazy = false,
+		opts = {},
+		config = function(_, opts)
+			require("leap").add_default_mappings()
+		end,
+	},
 }
