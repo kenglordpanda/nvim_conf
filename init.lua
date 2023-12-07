@@ -26,6 +26,6 @@ else
 	vim.keymap.set("n", "<Leader>la", ":Lazy<CR>", { desc = "Open Lazy Manager" })
 	require("kenglordpanda.lsp")
 	vim.cmd("set hidden")
-	vim.cmd("colorscheme bamboo")
+	vim.cmd("colorscheme darkrose")
 	vim.cmd("COQnow -s")
 end

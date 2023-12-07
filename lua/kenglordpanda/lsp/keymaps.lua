@@ -3,7 +3,6 @@ local nmap = function(lhs, rhs, desc)
 	local opts = { buffer = bufnr, noremap = true, silent = true, desc = desc }
 	vim.keymap.set("n", lhs, rhs, opts)
 end
-nmap("<Leader>fm", vim.lsp.buf.format, "LSP Format")
 nmap("gD", vim.lsp.buf.declaration, "Go to declaration")
 nmap("gd", vim.lsp.buf.definition, "Go to definition")
 nmap("K", vim.lsp.buf.hover, "LSP Hover")

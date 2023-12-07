@@ -1,8 +1,9 @@
 return {
-
 	{
-		"ribru17/bamboo.nvim", lazy = false, },
-
+		"water-sucks/darkrose.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	{
 		"nvim-lua/plenary.nvim",
 	},
@@ -50,6 +51,25 @@ return {
 		opts = {},
 		config = function(_, opts)
 			require("leap").add_default_mappings()
+		end,
+	},
+	{
+		"stevearc/dressing.nvim",
+		opts = {},
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && yarn install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+	{
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup()
 		end,
 	},
 }

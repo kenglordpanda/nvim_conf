@@ -41,7 +41,7 @@ return {
 			})
 
 			require("telescope").load_extension("harpoon")
-			vim.keymap.set("n", "<Leader>hf", ":Telescope harpoon marks<CR>", { desc = "Harpoon find" })
+			vim.keymap.set("n", "<Leader>fm", ":Telescope harpoon marks<CR>", { desc = "Harpoon find" })
 
 			vim.keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, { desc = "Harpoon add" })
 			vim.keymap.set("n", "<leader>hm", require("harpoon.ui").toggle_quick_menu, { desc = "Harpoon show" })
@@ -51,6 +51,18 @@ return {
 				local count = vim.v.count
 				require("harpoon.ui").nav_file(count)
 			end, { desc = "Harpoon go {count}" })
+		end,
+	},
+	{
+		"AckslD/nvim-neoclip.lua",
+		dependencies = {
+			{ "kkharji/sqlite.lua", module = "sqlite" },
+			{ "nvim-telescope/telescope.nvim" },
+		},
+		config = function()
+			require("neoclip").setup()
+			require("telescope").load_extension("neoclip")
+			vim.keymap.set("n", "<leader>fc", ":Telescope neoclip<CR>", { desc = "Find Clips" })
 		end,
 	},
 }

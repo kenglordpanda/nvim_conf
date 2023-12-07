@@ -23,6 +23,10 @@ return {
 					go = { "gofumpt", "goimports", "goimports-reviser" },
 					cpp = { "clang-format" },
 					markdown = { "markdownlint" },
+					csharp = { "csharpier" },
+					javascript = { "prettierd" },
+					html = { "prettierd" },
+					css = { "prettierd" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
@@ -41,6 +45,8 @@ return {
 				cpp = { "cpplint" },
 				lua = { "luacheck" },
 				python = { "flake8" },
+				javascript = { "eslint_d" },
+				css = { "stylelint" },
 			}
 			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 				callback = function()
