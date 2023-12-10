@@ -25,15 +25,15 @@ return {
 			link_tree_to_folds = false,
 			nerd_font = "auto",
 			on_attach = function(bufnr)
+				-- vim.keymap.set(
+				-- 	"n",
+				-- 	"<leader>at",
+				-- 	":AerialToggle<CR>",
+				-- 	{ desc = "Toggle Aerial Window", noremap = true, silent = true }
+				-- )
 				vim.keymap.set(
 					"n",
-					"<leader>at",
-					":AerialToggle<CR>",
-					{ desc = "Toggle Aerial Window", noremap = true, silent = true }
-				)
-				vim.keymap.set(
-					"n",
-					"<leader>av",
+					"<leader>aa",
 					":AerialNavToggle<CR>",
 					{ desc = "Toggle Aerial Nav", noremap = true, silent = true }
 				)

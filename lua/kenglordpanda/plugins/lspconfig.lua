@@ -41,7 +41,7 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				markdown = { "markdownlint" },
-				go = { "golangci-lint", "gospel" },
+				go = { "gospel" },
 				cpp = { "cpplint" },
 				lua = { "luacheck" },
 				python = { "flake8" },

@@ -21,5 +21,5 @@ vim.keymap.set("n", "<Leader>bW", ":bw!<CR>", { desc = "Wipeout Buffer for Sure"
 vim.keymap.set("n", "<Leader>i", "a", { noremap = true, silent = true, desc = { "Insert After" } })
 vim.keymap.set("n", "a", "<Nop>", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<Leader>q", ":copen<CR>", { desc = "Open Quick Fix", noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>ll", ":lopen<CR>", { desc = "Open Location List", noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>lc", ":lclose<CR>", { desc = "Open Location List", noremap = true, silent = true })
