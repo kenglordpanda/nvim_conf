@@ -12,12 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 if vim.fn.exists("g:vscode") ~= 0 then
-	require("kenglordpanda.vscode.core")
 	require("lazy").setup({
 		spec = {
-			{ import = "kenglordpanda.vscode.plugins" },
+			{ import = "kenglordpanda.vscode-plugins" },
 		},
 	})
+	require("kenglordpanda.vscode-keymaps")
 else
 	require("lazy").setup({
 		spec = {
