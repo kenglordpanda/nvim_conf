@@ -68,4 +68,17 @@ return {
 			require("project_nvim").setup()
 		end,
 	},
+	{
+		"brenoprata10/nvim-highlight-colors",
+		lazy = false,
+		opts = {},
+		config = function(_, opts)
+			vim.keymap.set(
+				"n",
+				"<Leader>th",
+				":HighlightColorsToggle<CR>",
+				{ desc = "Toggle Highlighter", noremap = true, silent = true }
+			)
+		end,
+	},
 }
