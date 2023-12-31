@@ -4,7 +4,7 @@ require("mason-lspconfig").setup({
 })
 local lspconfig = require("lspconfig")
 local coq = require("coq")
-local lsps = { "lua_ls", "pyright", "gopls", "marksman", "html", "clangd", "cssls", "eslint" }
+local lsps = { "lua_ls", "pyright", "gopls", "marksman", "html", "clangd", "cssls", "eslint", "taplo" }
 for _, lsp in ipairs(lsps) do
 	lspconfig[lsp].setup({
 		coq.lsp_ensure_capabilities({

@@ -45,8 +45,8 @@ return {
 
 			vim.keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, { desc = "Harpoon add" })
 			vim.keymap.set("n", "<leader>hm", require("harpoon.ui").toggle_quick_menu, { desc = "Harpoon show" })
-			vim.keymap.set("n", "<leader>hn", require("harpoon.ui").nav_next, { desc = "Harpoon next" })
-			vim.keymap.set("n", "<leader>hp", require("harpoon.ui").nav_prev, { desc = "Harpoon prev" })
+			vim.keymap.set("n", "]h", require("harpoon.ui").nav_next, { desc = "Harpoon next" })
+			vim.keymap.set("n", "[h", require("harpoon.ui").nav_prev, { desc = "Harpoon prev" })
 			vim.keymap.set("n", "<leader>hg", function()
 				local count = vim.v.count
 				require("harpoon.ui").nav_file(count)

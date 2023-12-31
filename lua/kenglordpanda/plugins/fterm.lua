@@ -21,6 +21,9 @@ return {
 				width = 0.65,
 			},
 		},
+		config = function(_, opts)
+			require("FTerm").setup(opts)
+		end,
 		lazy = true,
 	},
 }

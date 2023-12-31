@@ -20,11 +20,12 @@ return {
 				formatters_by_ft = {
 					lua = { "stylua" },
 					python = { "isort", "black" },
-					go = { "gofumpt", "goimports", "goimports-reviser" },
+					go = { "gofumpt", "goimports", "goimports-reviser", "golines", "gomodifytags" },
 					cpp = { "clang-format" },
 					markdown = { "markdownlint" },
 					csharp = { "csharpier" },
 					javascript = { "prettierd" },
+					typescript = { "prettierd " },
 					html = { "prettierd" },
 					css = { "prettierd" },
 				},
@@ -41,11 +42,11 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				markdown = { "markdownlint" },
-				go = { "gospel" },
 				cpp = { "cpplint" },
 				lua = { "luacheck" },
 				python = { "flake8" },
 				javascript = { "eslint_d" },
+				typescript = { "eslint_d" },
 				css = { "stylelint" },
 			}
 			vim.api.nvim_create_autocmd({ "BufWritePost" }, {

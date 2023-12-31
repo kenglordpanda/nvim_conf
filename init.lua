@@ -27,7 +27,8 @@ else
 	vim.keymap.set("n", "<Leader>la", ":Lazy<CR>", { desc = "Open Lazy Manager" })
 	require("kenglordpanda.lsp")
 	vim.cmd("set hidden")
-	vim.cmd("colorscheme predawn")
-	-- vim.cmd("colorscheme moonfly")
+	vim.cmd("colorscheme kanagawa-dragon")
+	vim.cmd("set clipboard=unnamedplus")
+	vim.cmd("set clipboard+=unnamed")
 	vim.cmd("COQnow -s")
 end
