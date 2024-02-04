@@ -1,5 +1,4 @@
 return {
-	{ "rebelot/kanagawa.nvim", lazy = false, priority = 1000 },
 	{
 		"nvim-lua/plenary.nvim",
 	},
