@@ -52,7 +52,7 @@ return {
 					h6 = "foam",
 				},
 				highlight_groups = {
-					Comment = { fg = "pine", italic = true },
+					Comment = { fg = "foam", italic = true },
 				},
 			})
 		end,

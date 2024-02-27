@@ -26,6 +26,7 @@ return {
 					csharp = { "csharpier" },
 					javascript = { "prettierd" },
 					typescript = { "prettierd " },
+					vue = { "prettierd" },
 					html = { "prettierd" },
 					css = { "prettierd" },
 					xml = { "xmlformatter" },
