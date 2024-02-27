@@ -19,17 +19,11 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					python = { "isort", "black" },
-					go = { "gofumpt", "goimports", "goimports-reviser", "golines", "gomodifytags" },
-					cpp = { "clang-format" },
-					markdown = { "markdownlint" },
-					csharp = { "csharpier" },
 					javascript = { "prettierd" },
 					typescript = { "prettierd " },
 					vue = { "prettierd" },
 					html = { "prettierd" },
 					css = { "prettierd" },
-					xml = { "xmlformatter" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
@@ -43,10 +37,7 @@ return {
 		config = function()
 			local lint = require("lint")
 			lint.linters_by_ft = {
-				markdown = { "markdownlint" },
-				cpp = { "cpplint" },
 				lua = { "luacheck" },
-				python = { "flake8" },
 				javascript = { "eslint_d" },
 				typescript = { "eslint_d" },
 				css = { "stylelint" },

@@ -53,16 +53,4 @@ return {
 			end, { desc = "Harpoon go {count}" })
 		end,
 	},
-	{
-		"AckslD/nvim-neoclip.lua",
-		dependencies = {
-			{ "kkharji/sqlite.lua", module = "sqlite" },
-			{ "nvim-telescope/telescope.nvim" },
-		},
-		config = function()
-			require("neoclip").setup()
-			require("telescope").load_extension("neoclip")
-			vim.keymap.set("n", "<leader>fc", ":Telescope neoclip<CR>", { desc = "Find Clips" })
-		end,
-	},
 }

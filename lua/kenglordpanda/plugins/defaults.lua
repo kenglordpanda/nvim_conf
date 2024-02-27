@@ -52,32 +52,4 @@ return {
 		"stevearc/dressing.nvim",
 		opts = {},
 	},
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && yarn install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	},
-	{
-		"ahmedkhalf/project.nvim",
-		config = function()
-			require("project_nvim").setup()
-		end,
-	},
-	{
-		"brenoprata10/nvim-highlight-colors",
-		lazy = false,
-		opts = {},
-		config = function(_, opts)
-			vim.keymap.set(
-				"n",
-				"<Leader>th",
-				":HighlightColorsToggle<CR>",
-				{ desc = "Toggle Highlighter", noremap = true, silent = true }
-			)
-		end,
-	},
 }
