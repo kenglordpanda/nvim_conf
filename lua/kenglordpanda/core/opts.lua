@@ -8,12 +8,18 @@ vim.opt.expandtab = true
 vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+
+-- setting home dir
+local home = os.getenv("HOME")
+if not home then
+	home = os.getenv("USERPROFILE")
+end
+if home then
+	vim.opt.undodir = home .. "/.nvim/undodir"
+end
 vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.cmd("set t_Co=256")
--- render xaml as xml
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, { pattern = { "*.xaml" }, command = "setf xml" })
