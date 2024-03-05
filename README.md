@@ -1,6 +1,8 @@
 # Dependencies
 
-* Python3
-* Sqlite
-* Python3 Virtual Env
-* Cmake
+* Cmake (For luasnip)
+* Node (for lsps)
+* C++ Compiler 
+
+
+* Ripgrep for telescope
