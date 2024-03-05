@@ -30,5 +30,4 @@ else
 	vim.cmd("set hidden")
 	vim.cmd("set clipboard=unnamedplus")
 	vim.cmd("set clipboard+=unnamed")
-	vim.cmd("COQnow -s")
 end

@@ -8,7 +8,15 @@ vim.opt.expandtab = true
 vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+
+--setting home dir
+local home = os.getenv("HOME") -- linux
+if not home then
+	home = os.getenv("USERPROFILE") -- windows
+end
+if home then
+	vim.opt.undodir = home .. "/.nvim/undodir"
+end
 vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
