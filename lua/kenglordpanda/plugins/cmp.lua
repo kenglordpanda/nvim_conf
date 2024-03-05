@@ -19,7 +19,6 @@ return {
 			vim.o.completeopt = "menuone,noselect"
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
-			local lspkind = require("lspkind")
 			cmp.setup({
 
 				snippet = {
@@ -36,7 +35,7 @@ return {
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 					["<Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_next_item()
@@ -64,16 +63,35 @@ return {
 					{ name = "nvim_lua" },
 					{ name = "buffer", keyword_length = 1 },
 				}),
+
 				formatting = {
-					format = lspkind.cmp_format({
-						mode = "symbol",
-						maxwidth = 40,
-						ellipsis_char = "...",
-						show_labelDetails = true,
-						before = function(entry, vim_item)
-							return vim_item
-						end,
-					}),
+
+					format = function(entry, vim_item)
+						-- fancy icons and a name of kind
+						local import_lspkind, lspkind = pcall(require, "lspkind")
+						if import_lspkind then
+							vim_item.kind = lspkind.presets.default[vim_item.kind]
+						end
+
+						-- limit completion width
+						local ELLIPSIS_CHAR = "…"
+						local MAX_LABEL_WIDTH = 40
+						local label = vim_item.abbr
+						local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
+						if truncated_label ~= label then
+							vim_item.abbr = truncated_label .. ELLIPSIS_CHAR
+						end
+
+						-- set a name for each source
+						vim_item.menu = ({
+							buffer = "[Buff]",
+							nvim_lsp = "[LSP]",
+							luasnip = "[LuaSnip]",
+							nvim_lua = "[Lua]",
+							latex_symbols = "[Latex]",
+						})[entry.source.name]
+						return vim_item
+					end,
 				},
 			})
 			cmp.setup.cmdline({ "/", "?" }, {
