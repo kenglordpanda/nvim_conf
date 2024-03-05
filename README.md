@@ -6,3 +6,4 @@
 
 
 * Ripgrep for telescope
+* Patched Nerdfont for Icons 
