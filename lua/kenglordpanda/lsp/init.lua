@@ -22,23 +22,6 @@ for _, lsp in ipairs(lsps) do
 	})
 end
 
--- OmniSharp Config
--- local pid = vim.fn.getpid()
--- local omnisharp_bin = "/home/kenglordpanda/NvimLocalLSPs/omnisharp-roslyn/OmniSharp"
--- local omnisharp_config = {
--- 	on_attach = on_attach,
--- 	capabilities = capabilities,
--- 	cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
--- 	enable_editorconfig_support = true,
--- 	enable_ms_build_load_projects_on_demand = false,
--- 	enable_roslyn_analyzers = true,
--- 	organize_imports_on_format = true,
--- 	enable_import_completion = true,
--- 	sdk_include_prereleases = true,
--- 	analyze_open_documents_only = false,
--- }
--- require("lspconfig").omnisharp.setup(omnisharp_config)
-
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, { desc = "Open floating diagonstic" })
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })

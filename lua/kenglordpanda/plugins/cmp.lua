@@ -62,6 +62,7 @@ return {
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "nvim_lua" },
 					{ name = "buffer", keyword_length = 1 },
+					{ name = "path" },
 				}),
 
 				formatting = {
@@ -94,11 +95,13 @@ return {
 					end,
 				},
 			})
-			cmp.setup.cmdline({ "/", "?" }, {
+			cmp.setup.cmdline(":", {
 				mapping = cmp.mapping.preset.cmdline(),
-				sources = {
-					{ name = "buffer" },
-				},
+				sources = cmp.config.sources({
+					{ name = "path" },
+				}, {
+					{ name = "cmdline" },
+				}),
 			})
 		end,
 	},
