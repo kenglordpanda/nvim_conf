@@ -63,6 +63,7 @@ return {
 					{ name = "nvim_lua" },
 					{ name = "buffer", keyword_length = 1 },
 					{ name = "path" },
+					{ name = "cmdline" },
 				}),
 
 				formatting = {
