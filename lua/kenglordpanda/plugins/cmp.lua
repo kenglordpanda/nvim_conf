@@ -57,10 +57,12 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp_signature_help" },
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "nvim_lua" },
-				}, {
-					{ name = "buffer" },
+					{ name = "buffer", keyword_length = 1 },
+					{ name = "path" },
+					{ name = "cmdline" },
 				}),
 				formatting = {
 
