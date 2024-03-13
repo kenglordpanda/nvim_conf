@@ -56,13 +56,13 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "nvim_lsp_signature_help" },
-					{ name = "luasnip" }, -- For luasnip users.
-					{ name = "nvim_lua" },
-					{ name = "buffer", keyword_length = 1 },
-					{ name = "path" },
-					{ name = "cmdline" },
+					{ name = "nvim_lsp", max_item_count = 5 },
+					{ name = "nvim_lsp_signature_help", max_item_count = 2 },
+					{ name = "luasnip", max_item_count = 5 }, -- For luasnip users.
+					{ name = "nvim_lua", max_item_count = 2 },
+					{ name = "buffer", keyword_length = 3 },
+					{ name = "path", max_item_count = 3 },
+					{ name = "cmdline", max_item_count = 3 },
 				}),
 				formatting = {
 
@@ -75,7 +75,7 @@ return {
 
 						-- limit completion width
 						local ELLIPSIS_CHAR = "…"
-						local MAX_LABEL_WIDTH = 35
+						local MAX_LABEL_WIDTH = 15
 						local label = vim_item.abbr
 						local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
 						if truncated_label ~= label then
