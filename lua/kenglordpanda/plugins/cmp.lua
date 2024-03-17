@@ -7,7 +7,6 @@ return {
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
@@ -59,7 +58,6 @@ return {
 					{ name = "nvim_lsp", max_item_count = 5 },
 					{ name = "nvim_lsp_signature_help", max_item_count = 2 },
 					{ name = "luasnip", max_item_count = 5 }, -- For luasnip users.
-					{ name = "nvim_lua", max_item_count = 2 },
 					{ name = "buffer", keyword_length = 3 },
 					{ name = "path", max_item_count = 3 },
 					{ name = "cmdline", max_item_count = 3 },
@@ -87,8 +85,8 @@ return {
 							buffer = "[Buff]",
 							nvim_lsp = "[LSP]",
 							luasnip = "[LuaSnip]",
-							nvim_lua = "[Lua]",
-							latex_symbols = "[Latex]",
+							path = "[PATH]",
+							cmdline = "[CMDLINE]",
 						})[entry.source.name]
 						return vim_item
 					end,
