@@ -15,13 +15,11 @@ return {
 				formatters_by_ft = {
 					lua = { "stylua" },
 					python = { "isort", "black" },
-					go = { "gofumpt", "goimports", "goimports-reviser", "golines", "gomodifytags" },
 					cpp = { "clang-format" },
 					markdown = { "markdownlint" },
 					csharp = { "csharpier" },
 					javascript = { "prettierd" },
 					typescript = { "prettierd " },
-					vue = { "prettierd" },
 					html = { "prettierd" },
 					css = { "prettierd" },
 				},

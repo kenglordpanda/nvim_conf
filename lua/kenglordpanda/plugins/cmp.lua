@@ -61,7 +61,7 @@ return {
 					{ name = "luasnip", max_item_count = 5 }, -- For luasnip users.
 					{ name = "buffer", keyword_length = 1, max_item_count = 3 },
 					{ name = "path", max_item_count = 2 },
-					{ name = "cmdline", max_item_count = 2 },
+					-- { name = "cmdline", max_item_count = 2 },
 				}),
 
 				formatting = {
